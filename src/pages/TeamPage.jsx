@@ -6,10 +6,10 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import bannerDefault from "../../public/banner4.jpg";
 import bannerScrolled from "../../public/banner5.jpg";
-import banner3 from "../../public/banner3.jpg"; // Add more images as needed
+import banner3 from "../../public/banner3.jpg"; 
 import logo from "../../public/logo.png";
 
-const AboutPage = () => {
+const TeamPage = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -83,4 +83,4 @@ const AboutPage = () => {
   );
 };
 
-export default AboutPage;
+export default TeamPage;

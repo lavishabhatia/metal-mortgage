@@ -4,6 +4,8 @@ import profile from "../../../public/profile.png";
 import Container from "./Container";
 
 const ProfileCard = () => {
+
+  
   return (
     <div className=" bg-gray-100 flex flex-col items-center w-full">
       {/* Main Container */}

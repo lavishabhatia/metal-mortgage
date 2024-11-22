@@ -21,10 +21,10 @@ const Navbar = () => {
       <Container>
         <nav className="flex items-center justify-between text-white p-4">
           <div className="flex items-center space-x-8">
-            <a href="#home" className="hover:text-gray-400 ">
+            <a href="/home" className="hover:text-gray-400 ">
               HOME
             </a>
-            <a href="#about" className="hover:text-gray-400">
+            <a href="/about" className="hover:text-gray-400">
               ABOUT
             </a>
             <a href="#team" className="flex items-center hover:text-gray-400">
