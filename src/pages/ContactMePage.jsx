@@ -8,9 +8,8 @@ import bannerDefault from "../../public/banner4.jpg";
 import bannerScrolled from "../../public/banner5.jpg";
 import banner3 from "../../public/banner3.jpg";
 import logo from "../../public/logo.png";
-import { useLocation } from "react-router-dom";
 
-const TeamPage = () => {
+const ContactMePage = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
@@ -85,4 +84,4 @@ const TeamPage = () => {
   );
 };
 
-export default TeamPage;
+export default ContactMePage;

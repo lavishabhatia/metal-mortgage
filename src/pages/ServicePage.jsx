@@ -25,7 +25,6 @@ const ServicePage = () => {
 
   return (
     <div className="relative w-full flex flex-col items-center">
-      {/* Sticky Banner Header */}
       <div
         className={`fixed top-0 w-full z-10 transition-all duration-500 ${
           isScrolled ? "bg-white shadow-lg text-black" : "bg-transparent text-white"

@@ -5,11 +5,16 @@ import Container from "./Container";
 import ContactCard from "./ContactCard";
 import { useLocation } from "react-router-dom";
 import MortgageOptions from "./MortgageOptions";
+import VideoBox from "./VideoBox";
+import Welcome from "./Welcome";
 
 const ProfileCard = () => {
   const location = useLocation();
   const showContactCard = location.pathname.includes("team");
   const showMortgageOptions = location.pathname.includes("services");
+  const showVideoBox = location.pathname.includes("video");
+  const showWelcome = location.pathname.includes("/");
+  
   return (
     <div className="  flex flex-col items-center w-full">
       {/* Main Container */}
@@ -86,8 +91,10 @@ const ProfileCard = () => {
             <div className="w-[75%] p-6 text-gray-700">
               {showContactCard && <ContactCard />}
               {showMortgageOptions && <MortgageOptions />}
+              {showVideoBox && <VideoBox />}
+              {showWelcome && <Welcome />}
 
-              <p className="text-lg font-bold mb-4">
+              {/* <p className="text-lg font-bold mb-4">
                 Welcome to Metal Mortgage
               </p>
               <p className="mb-4">
@@ -112,7 +119,7 @@ const ProfileCard = () => {
               <p>
                 Welcome aboard, let's unlock the doors to your financial success
                 together!
-              </p>
+              </p> */}
             </div>
           </div>
         </div>

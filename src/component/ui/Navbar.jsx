@@ -21,7 +21,7 @@ const Navbar = () => {
       <Container>
         <nav className="flex items-center justify-between text-white p-4">
           <div className="flex items-center space-x-8">
-            <a href="/home" className="hover:text-gray-400 ">
+            <a href="/" className="hover:text-gray-400 ">
               HOME
             </a>
             <a href="/about" className="hover:text-gray-400">
@@ -44,7 +44,6 @@ const Navbar = () => {
             </a>
           </div>
 
-          {/* Right Section */}
           <div>
             <a href="/apply" className="flex items-center hover:text-gray-400">
               APPLY NOW <span className="ml-1">✏️</span>
