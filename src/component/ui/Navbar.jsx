@@ -27,17 +27,17 @@ const Navbar = () => {
             <a href="/about" className="hover:text-gray-400">
               ABOUT
             </a>
-            <a href="#team" className="flex items-center hover:text-gray-400">
+            <a href="/team" className="flex items-center hover:text-gray-400">
               TEAM <span className="ml-1">👥</span>
             </a>
-            <a href="#services" className="hover:text-gray-400">
+            <a href="/services" className="hover:text-gray-400">
               SERVICES
             </a>
-            <a href="#video" className="hover:text-gray-400">
+            <a href="/video" className="hover:text-gray-400">
               VIDEO
             </a>
             <a
-              href="#contact"
+              href="/contact"
               className="flex items-center hover:text-gray-400"
             >
               CONTACT ME <span className="ml-1">✉️</span>
@@ -46,7 +46,7 @@ const Navbar = () => {
 
           {/* Right Section */}
           <div>
-            <a href="#apply" className="flex items-center hover:text-gray-400">
+            <a href="/apply" className="flex items-center hover:text-gray-400">
               APPLY NOW <span className="ml-1">✏️</span>
             </a>
           </div>

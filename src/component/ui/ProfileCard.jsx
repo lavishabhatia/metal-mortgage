@@ -2,17 +2,21 @@ import React from "react";
 import { CiSquarePlus } from "react-icons/ci";
 import profile from "../../../public/profile.png";
 import Container from "./Container";
+import ContactCard from "./ContactCard";
+import { useLocation } from "react-router-dom";
+import MortgageOptions from "./MortgageOptions";
 
 const ProfileCard = () => {
-
-  
+  const location = useLocation();
+  const showContactCard = location.pathname.includes("team");
+  const showMortgageOptions = location.pathname.includes("services");
   return (
-    <div className=" bg-gray-100 flex flex-col items-center w-full">
+    <div className="  flex flex-col items-center w-full">
       {/* Main Container */}
       <Container>
-        <div className="bg-white shadow-md  w-full rounded-lg overflow-hidden">
+        <div className="shadow-md  w-full rounded-lg overflow-hidden">
           {/* Header Section */}
-          <div className="flex flex-col md:flex-row items-center md:items-start">
+          <div className="flex flex-col bg-gray-200  md:flex-row items-center md:items-start">
             {/* Image Section */}
             <div className="bg-gray-200 w-[25%] flex justify-center items-center">
               <img
@@ -80,6 +84,9 @@ const ProfileCard = () => {
 
             {/* Description Section */}
             <div className="w-[75%] p-6 text-gray-700">
+              {showContactCard && <ContactCard />}
+              {showMortgageOptions && <MortgageOptions />}
+
               <p className="text-lg font-bold mb-4">
                 Welcome to Metal Mortgage
               </p>
