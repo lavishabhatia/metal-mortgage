@@ -8,10 +8,10 @@ import bannerDefault from "../../public/banner4.jpg";
 import bannerScrolled from "../../public/banner5.jpg";
 import banner3 from "../../public/banner3.jpg";
 import logo from "../../public/logo.png";
-import { useLocation } from "react-router-dom";
 
 const TeamPage = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 100);
@@ -33,9 +33,15 @@ const TeamPage = () => {
             : "bg-transparent text-white"
         }`}
       >
-        <div className="flex items-center justify-between p-4">
-          <img src={logo} alt="Logo" className="w-16" />
-          <button className="bg-black text-white px-4 py-2 flex items-center gap-2">
+        <div className="flex items-center justify-between px-4 py-2 md:px-8 md:py-4">
+          {/* Responsive Logo */}
+          <img
+            src={logo}
+            alt="Logo"
+            className="w-12 md:w-16 lg:w-20"
+          />
+          {/* Responsive Button */}
+          <button className="bg-black text-white px-3 py-1 md:px-4 md:py-2 flex items-center gap-2 text-xs md:text-sm lg:text-base">
             APPLY NOW
             <span className="material-icons">edit</span>
           </button>
@@ -43,14 +49,14 @@ const TeamPage = () => {
       </div>
 
       {/* Dynamic Banner with Carousel */}
-      <div className="w-full ">
+      <div className="w-full">
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
           navigation
           pagination={{ clickable: true }}
           autoplay={{ delay: 5000 }}
           loop
-          className="h-[600px]"
+          className="h-[400px] md:h-[500px] lg:h-[600px]"
         >
           <SwiperSlide>
             <img
@@ -77,7 +83,7 @@ const TeamPage = () => {
       </div>
 
       {/* Footer Section */}
-      <div className="absolute bottom-4 right-4 text-xs bg-black text-white py-1 px-4 flex gap-4">
+      <div className="absolute bottom-4 right-4 text-xs md:text-sm bg-black text-white py-1 px-2 md:py-2 md:px-4 flex flex-col md:flex-row gap-2 md:gap-4 items-center md:items-start">
         <span>AGENT LICENSE ID | M13002164</span>
         <span>BROKERAGE LICENSE ID | 13607</span>
       </div>

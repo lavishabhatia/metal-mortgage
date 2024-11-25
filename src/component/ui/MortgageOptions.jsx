@@ -52,16 +52,23 @@ const MortgageOptions = () => {
   ];
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-8">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-6 sm:p-8 lg:p-12">
       {sections.map((section, index) => (
-        <div key={index} className="">
-          <h2 className="text-4xl font-extralight text-black mb-2 border-b-2 border-gray-400 pb-4">
+        <div key={index}>
+          {/* Title */}
+          <h2 className="text-3xl sm:text-4xl font-extralight text-black mb-4 sm:mb-6 border-b-2 border-gray-400 pb-2 sm:pb-4">
             {section.title}
           </h2>
-          <p className="text-gray-600 mb-3">{section.description}</p>
-          <ul className="list-disc pl-5 text-gray-800">
+          
+          {/* Description */}
+          <p className="text-base sm:text-lg text-gray-600 mb-4 sm:mb-6">
+            {section.description}
+          </p>
+          
+          {/* List of Items */}
+          <ul className="list-disc pl-5 text-base sm:text-lg text-gray-800">
             {section.items.map((item, idx) => (
-              <li key={idx}>{item}</li>
+              <li key={idx} className="mb-2">{item}</li>
             ))}
           </ul>
         </div>

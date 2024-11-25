@@ -2,12 +2,10 @@ import React from "react";
 
 const VideoBox = () => {
   return (
-    <div className=" w-full flex items-center justify-center">
+    <div className="w-full flex items-center justify-center px-4 sm:px-8">
       {/* Video Box */}
-      <div className="w-[900px] h-[600px] bg-gray-200">
+      <div className="w-full max-w-3xl aspect-w-16 aspect-h-9 bg-gray-200">
         <iframe
-          //   width="560"
-          //   height="315"
           src="https://www.youtube.com/embed/WE_EgwFRils?si=NHIULPcDXmbt6Xto"
           title="YouTube video player"
           frameBorder="0"

@@ -6,7 +6,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import bannerDefault from "../../public/banner.png";
 import bannerScrolled from "../../public/banner2.png";
-import banner3 from "../../public/banner3.jpg"; // Add more images as needed
+import banner3 from "../../public/banner3.jpg"; 
 import logo from "../../public/logo.png";
 
 const HomePage = () => {
@@ -25,30 +25,36 @@ const HomePage = () => {
 
   return (
     <div className="relative w-full flex flex-col items-center">
-      {/* Sticky Banner Header */}
+    
       <div
         className={`fixed top-0 w-full z-10 transition-all duration-500 ${
           isScrolled ? "bg-white shadow-lg text-black" : "bg-transparent text-white"
         }`}
       >
-        <div className="flex items-center justify-between p-4">
-          <img src={logo} alt="Logo" className="w-16" />
-          <button className="bg-black text-white px-4 py-2 flex items-center gap-2">
+        <div className="flex items-center justify-between px-4 md:px-8 py-2 md:py-4">
+       
+          <img
+            src={logo}
+            alt="Logo"
+            className="w-12 md:w-16 lg:w-20"
+          />
+
+          <button className="bg-black text-white px-3 py-1 md:px-4 md:py-2 flex items-center gap-2 text-xs md:text-sm lg:text-base">
             APPLY NOW
             <span className="material-icons">edit</span>
           </button>
         </div>
       </div>
 
-      {/* Dynamic Banner with Carousel */}
-      <div className="w-full ">
+  
+      <div className="w-full">
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
           navigation
           pagination={{ clickable: true }}
           autoplay={{ delay: 5000 }}
           loop
-          className="h-[600px]"
+          className="h-[400px] md:h-[500px] lg:h-[600px]"
         >
           <SwiperSlide>
             <img
@@ -74,8 +80,8 @@ const HomePage = () => {
         </Swiper>
       </div>
 
-      {/* Footer Section */}
-      <div className="absolute bottom-4 right-4 text-xs bg-black text-white py-1 px-4 flex gap-4">
+  
+      <div className="absolute bottom-4 right-4 text-xs md:text-sm bg-black text-white py-1 px-2 md:py-2 md:px-4 flex flex-col md:flex-row gap-2 md:gap-4 items-center md:items-start">
         <span>AGENT LICENSE ID | M13002164</span>
         <span>BROKERAGE LICENSE ID | 13607</span>
       </div>

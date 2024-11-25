@@ -11,6 +11,7 @@ import logo from "../../public/logo.png";
 
 const ContactMePage = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 100);
@@ -27,14 +28,14 @@ const ContactMePage = () => {
       {/* Sticky Banner Header */}
       <div
         className={`fixed top-0 w-full z-10 transition-all duration-500 ${
-          isScrolled
-            ? "bg-white shadow-lg text-black"
-            : "bg-transparent text-white"
+          isScrolled ? "bg-white shadow-lg text-black" : "bg-transparent text-white"
         }`}
       >
-        <div className="flex items-center justify-between p-4">
-          <img src={logo} alt="Logo" className="w-16" />
-          <button className="bg-black text-white px-4 py-2 flex items-center gap-2">
+        <div className="flex items-center justify-between px-4 py-2 md:px-6 lg:px-8 md:py-4">
+          {/* Logo */}
+          <img src={logo} alt="Logo" className="w-12 sm:w-16 lg:w-20" />
+          {/* Apply Button */}
+          <button className="bg-black text-white px-3 py-1 sm:px-4 sm:py-2 flex items-center gap-2 text-xs sm:text-sm lg:text-base">
             APPLY NOW
             <span className="material-icons">edit</span>
           </button>
@@ -42,14 +43,14 @@ const ContactMePage = () => {
       </div>
 
       {/* Dynamic Banner with Carousel */}
-      <div className="w-full ">
+      <div className="w-full">
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
           navigation
           pagination={{ clickable: true }}
           autoplay={{ delay: 5000 }}
           loop
-          className="h-[600px]"
+          className="h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px]"
         >
           <SwiperSlide>
             <img
@@ -76,7 +77,7 @@ const ContactMePage = () => {
       </div>
 
       {/* Footer Section */}
-      <div className="absolute bottom-4 right-4 text-xs bg-black text-white py-1 px-4 flex gap-4">
+      <div className="absolute bottom-4 right-4 text-xs sm:text-sm lg:text-base bg-black text-white py-2 px-4 flex flex-col sm:flex-row gap-2 sm:gap-4 items-center sm:items-start">
         <span>AGENT LICENSE ID | M13002164</span>
         <span>BROKERAGE LICENSE ID | 13607</span>
       </div>

@@ -31,9 +31,13 @@ const AboutPage = () => {
           isScrolled ? "bg-white shadow-lg text-black" : "bg-transparent text-white"
         }`}
       >
-        <div className="flex items-center justify-between p-4">
-          <img src={logo} alt="Logo" className="w-16" />
-          <button className="bg-black text-white px-4 py-2 flex items-center gap-2">
+        <div className="flex items-center justify-between p-4 max-w-7xl mx-auto">
+          <img
+            src={logo}
+            alt="Logo"
+            className="w-12 sm:w-16" /* Adjust logo size for responsiveness */
+          />
+          <button className="bg-black text-white px-3 py-1 sm:px-4 sm:py-2 flex items-center gap-2 text-xs sm:text-sm">
             APPLY NOW
             <span className="material-icons">edit</span>
           </button>
@@ -41,14 +45,14 @@ const AboutPage = () => {
       </div>
 
       {/* Dynamic Banner with Carousel */}
-      <div className="w-full ">
+      <div className="w-full">
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
           navigation
           pagination={{ clickable: true }}
           autoplay={{ delay: 5000 }}
           loop
-          className="h-[600px]"
+          className="h-[200px] sm:h-[300px] lg:h-[600px]" /* Adjust banner height */
         >
           <SwiperSlide>
             <img
@@ -75,7 +79,7 @@ const AboutPage = () => {
       </div>
 
       {/* Footer Section */}
-      <div className="absolute bottom-4 right-4 text-xs bg-black text-white py-1 px-4 flex gap-4">
+      <div className="absolute bottom-4 right-4 text-[8px] sm:text-xs bg-black text-white py-1 px-2 sm:px-4 flex flex-wrap gap-2 sm:gap-4">
         <span>AGENT LICENSE ID | M13002164</span>
         <span>BROKERAGE LICENSE ID | 13607</span>
       </div>
