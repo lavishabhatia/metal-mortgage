@@ -19,12 +19,12 @@ const ProfileCard = () => {
 
   return (
     <div className="flex flex-col items-center w-full">
-      {/* Main Container */}
+
       <Container>
         <div className="shadow-md w-full rounded-lg overflow-hidden">
-          {/* Header Section */}
+     
           <div className="flex flex-col md:flex-row bg-gray-200 items-center md:items-start">
-            {/* Image Section */}
+    
             <div className="w-full md:w-[25%] bg-gray-200 flex justify-center items-center">
               <img
                 src={profile}
@@ -33,7 +33,7 @@ const ProfileCard = () => {
               />
             </div>
 
-            {/* Info Section */}
+         
             <div className="w-full md:w-[75%] p-4 sm:p-6">
               <h2 className="text-xl sm:text-2xl font-bold">Daniel Char</h2>
               <p className="text-gray-600 text-md sm:text-lg mb-2 sm:mb-4">
@@ -69,9 +69,8 @@ const ProfileCard = () => {
             </div>
           </div>
 
-          {/* Sidebar and Description Section */}
           <div className="flex flex-col md:flex-row bg-gray-50">
-            {/* Sidebar */}
+      
             <div className="w-full md:w-[25%] space-y-1 border-2 border-white">
               <button className="block w-full bg-black hover:bg-white text-white hover:text-black p-3 text-center md:text-left">
                 ARRANGE A CALL BACK
@@ -91,7 +90,7 @@ const ProfileCard = () => {
               </div>
             </div>
 
-            {/* Description Section */}
+
             <div className="w-full md:w-[75%] p-4 sm:p-6 text-gray-700">
               {showContactCard && <ContactCard />}
               {showMortgageOptions && <MortgageOptions />}

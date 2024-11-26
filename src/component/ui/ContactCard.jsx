@@ -4,7 +4,7 @@ import profile from "../../../public/profile.png";
 const ContactCard = () => {
   return (
     <div className="flex flex-col md:flex-row items-center md:items-start py-4 mx-auto gap-4 max-w-2xl">
-      {/* Profile Image */}
+
       <div className="w-28 h-28 sm:w-32 sm:h-32 flex-shrink-0">
         <img
           src={profile}
@@ -13,7 +13,7 @@ const ContactCard = () => {
         />
       </div>
 
-      {/* Contact Info */}
+   
       <div className="flex flex-col items-center md:items-start text-center md:text-left">
         <h2 className="text-xl sm:text-2xl text-blue-500 font-semibold">
           Daniel Char

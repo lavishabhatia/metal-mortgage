@@ -23,12 +23,18 @@ const AboutPage = () => {
     };
   }, []);
 
+  useEffect(() => {
+    window.onload = true;
+  }, []);
+
   return (
     <div className="relative w-full flex flex-col items-center">
       {/* Sticky Banner Header */}
       <div
         className={`fixed top-0 w-full z-10 transition-all duration-500 ${
-          isScrolled ? "bg-white shadow-lg text-black" : "bg-transparent text-white"
+          isScrolled
+            ? "bg-white shadow-lg text-black"
+            : "bg-transparent text-white"
         }`}
       >
         <div className="flex items-center justify-between p-4 max-w-7xl mx-auto">
